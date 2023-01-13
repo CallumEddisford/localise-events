@@ -8,7 +8,6 @@
   let events = JSON.parse(localStorage.getItem("events")) || [];
   events = events.sort(
     (a, b) => {
-      console.log(a);
       return dayjs(`${b.startDate}T${b.startTime}`).valueOf() - dayjs(`${a.startDate}T${a.startTime}`).valueOf()
     }  
   );
